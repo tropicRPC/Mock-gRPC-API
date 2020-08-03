@@ -1,0 +1,15 @@
+{
+  "name": "tropic-demo",
+  "version": "1.0.0",
+  "description": "Tropic demo files",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ed Chow, Joyce Lo, Roseanne Damasco, Shahrukh Khan, Steven Canavan",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/proto-loader": "^0.5.5",
+    "grpc": "^1.24.3"
+  }
+}

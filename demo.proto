@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package tropicalAnimals;
+
+service ManageService {
+  rpc sendAnimal(Animal) returns (Animal);
+  rpc getAnimals(voidNoParam) returns (Animals);
+  rpc getStreamAnimals (voidNoParam) returns (stream Animal);
+  rpc sendStreamAnimals (stream Animal) returns (Animals);
+  rpc sendAndGetAnimalSoundsPingPong (stream Animal) returns (stream Sound);
+  rpc sendAndGetAnimalSoundsPost (stream Animal) returns (stream Sound);
+}
+
+message voidNoParam {}
+
+message Animal {
+  int32 animalId = 1;
+  string animal = 2;
+  string sound = 3;
+}
+
+message Animals {
+  repeated Animal animals = 1;
+}
+
+message Sound {
+  int32 animalId = 1;
+  string sound = 2;
+}
